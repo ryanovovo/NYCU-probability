@@ -1,0 +1,34 @@
+\section{Concentrarion Inequality}
+\subsection*{Markov's Inequality}
+Let $X$ be a non-negative random variable, then for any $t>0$,
+    
+    $P(X\geq t)\leq \frac{E[X]}{t}$
+
+\subsection*{Chebyshev's Inequality}
+Let $X$ be a random variable with finite mean $\mu$ and variance $\sigma^2$, then for any $t>0$,
+
+    $P(|X-\mu|\geq t)\leq \frac{\sigma^2}{t^2}$
+
+\subsection*{Chernoff Bound}
+Let $X$ be a random variable, then for any $t>0, t \in S, a \in R$
+
+    $P(X\geq a)\leq e^{-ta}\times M_x(t)$
+
+\subsection*{Optimize Chernoff Bound}
+$P(X \geq a) \leq e^{-\phi(a)}$
+
+$\phi(a) = max(ta-ln(M_x(t))), t>0, t \in S$
+
+\subsection*{Hoeffding's Lemma}
+Let Z be a r.v. with $E[Z] = 0$, $Z \in [a, b]$ with probability 1
+
+$E[e^{tZ}]\leq exp(\frac{t^2(b-a)^2}{8})$
+
+\subsection*{Hoeffding's Inequality}
+Let $X_1, ..., X_n$ be a sequence of i.i.d r.v. with $a \leq X_i \leq b$ \\
+Define $\bar{X} = \frac{1}{n}\sum_{i=1}^{n}X_i$
+
+$P(|\bar{X} - \mu| \geq \epsilon) \leq 2exp(-\frac{2n\epsilon^2}{(b-a)^2})$\\
+$P(\bar{X} - \mu \geq \epsilon) \leq exp(-\frac{2n\epsilon^2}{(b-a)^2})$\\
+$P(\bar{X} - \mu \leq -\epsilon) \leq exp(-\frac{2n\epsilon^2}{(b-a)^2})$
+

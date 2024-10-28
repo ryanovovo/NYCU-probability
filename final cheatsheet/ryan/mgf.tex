@@ -1,0 +1,18 @@
+\section{Moment Generating Functions}
+\subsection*{Def}
+\begin{description}
+    \item[MGF] For any random variable $X$, the function
+    \[ M_X(t) = E(e^{tX}) \]
+    \[\mu_k = E(X^k) = M_X^{(k)}(0)\]
+\end{description}
+\subsection*{MGF of linear functions}
+    \begin{description}
+        \item[MGF of linear functions] If we have $Y = aX + b$
+        \[M_Y(t) = e^{bt}M_X(at)\]
+    \end{description}
+
+\subsection*{MGF of sum of independent RVs}
+    \begin{description}
+        \item If $X$ and $Y$ are independent
+        \[M_{X+Y}(t) = M_X(t)M_Y(t)\]
+    \end{description}

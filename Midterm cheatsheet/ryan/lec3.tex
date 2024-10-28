@@ -1,0 +1,17 @@
+\section{Conditional Probability}
+    \subsection*{Def: Conditional Probability}
+        $P(A|B) = \frac{P(A \cap B)}{P(B)}$
+    
+    \subsection*{Multiplication Rule}
+        $P(A_1 \cap A_2 \cap ... \cap A_n) = P(A_1)P(A_2|A_1)\\P(A_3|A_1 \cap A_2)...P(A_n|A_1 \cap A_2 \cap ... \cap A_{n-1})$
+
+    \subsection*{Total Probability Theorem}
+        $A_1, A_2, ... , A_n$ are disjoint and\\
+        $\bigcup_{i=1}^{n} A_i = \Omega$ (form partition) then\\
+        $P(A) = \sum_{i=1}^{n} P(A|B_i)P(B_i)$
+
+    \subsection*{Bayes' Rule}
+        $P(A|B) = \frac{P(B|A)P(A)}{P(B)}$\\
+        $P(A_i|B) = \frac{A_iP(B|A_i)}{P(B)}$\\
+        $P(B) = P(A_1)P(B|A_1)+P(A_2)P(B|A_2)+...+P(A_n)P(B|A_n)$
+        

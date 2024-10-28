@@ -1,0 +1,59 @@
+\section{Indepenence}
+    \subsection*{Def: Indepenence}
+        $P(A \cap B) = P(A)P(B)$\\
+        $P(A|B) = P(A)$\\
+
+    \subsection*{Indepenence of multiple events}
+        $P(\bigcap{i \in S}A_i) = \Pi{i \in S}A_i$\\
+        "for every(not pairwise)"
+        $S \subseteq {1, 2, 3,...,n}$\\
+        example:\\
+        $P(A_1 \cap A_2 \cap A_3) = P(A_1)P(A_2)P(A_3)$\\
+        $P(A_1| A_2 \cap A_3) = A_1$
+
+\section{CDF and PMF}
+    \subsection*{Def: R.V}
+        Map events to real numbers.\\
+    
+    \subsection*{Def: CDF}
+        For any R.V X, CDF of X ist\\
+        $F_x(t)=P_x(X \leq t)$
+
+    \subsection*{Use CDF to find the probability of an event(I)}
+        \begin{enumerate}
+            \item $P(X\leq a)=F_x(a)$
+            \item $P(X>a)=1-F_x(a)$
+            \item $P(X<a)=F_x(a^-)$
+            \item $P(X\geq a)=1-F_x(a^-)$
+            \item $P(X=a)=F_x(a)-F_x(a^-)$
+        \end{enumerate}
+
+    \subsection*{Use CDF to find the probability of an event(II)}
+        \begin{enumerate}
+            \item $P(a<X\leq b)=F_x(b)-F_x(a)$
+            \item $P(a<X<b)=F_x(b^-)-F_x(a)$
+            \item $P(a\leq X<b)=F_x(b^-)-F_x(a^-)$
+            \item $P(a\leq X\leq b)=F_x(b)-F_x(a^-)$
+        \end{enumerate} 
+
+    \subsection*{Properties of CDF}
+        \begin{enumerate}
+            \item $F_x(t)$ is non-decreasing
+            \item $\lim_{t \to \infty}F_x(t)=1$
+            \item $\lim_{t \to -\infty}F_x(t)=0$
+            \item $F_x(t)$ is right-continuous 
+            
+            (i.e. $F_x(t^+)=F_x(t)$)
+        \end{enumerate}
+
+    \subsection*{Def: PMF}
+        For any discrete R.V X, PMF of X is\\
+        \begin{enumerate}
+            \item $p_x(x)=P_x(X=x_i)$
+            \item $p_x(x)=0$,if $x\notin X$
+            \item $\sum_{i=1}^{\infty}p(x_i)=1$
+        \end{enumerate}
+
+
+    
+    

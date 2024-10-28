@@ -1,0 +1,17 @@
+\section{PDF}
+    \subsection*{Def}
+        $f(x)$ is a PDF of random variable $X$ if:
+        \begin{enumerate}
+            \item $f(x) \geq 0$
+            \item $\int_{-\infty}^{\infty} f(x) dx = 1$
+        \end{enumerate}
+
+    \subsection*{CDF}
+        $F(x)=P(X \leq x)=\int_{-\infty}^{x} f(t) dt$
+
+    \subsection*{Expected value}
+        $E[X] = \int_{-\infty}^{\infty} xf(x) dx$
+    
+    \subsection*{From CDF to PDF}
+        $f(x) = \frac{d}{dx} F(x)$\\
+        $f(x)$ must be continuous

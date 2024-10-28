@@ -1,0 +1,26 @@
+\section{Joint PDFs and CDFs}
+
+\subsection*{Joint Distributions}
+The \textbf{joint CDF} of $X$ and $Y$ is 
+$$F(x,y)=P(X \leq x, Y \leq y)$$
+In the discrete case, $X$ and $Y$ have a \textbf{joint PMF} 
+$$p_{X,Y}(x,y) = P(X=x,Y=y).$$ In the continuous case, they have a \textbf{joint PDF}
+\[f_{X,Y}(x,y) = \frac{\partial^2}{\partial x \partial y} F_{X,Y}(x,y).\]
+The joint PMF/PDF must be nonnegative and sum/integrate to 1.
+\subsection*{Marginal Distributions}
+To find the distribution of one (or more) random variables from a joint PMF/PDF, sum/integrate over the unwanted random variables. \medskip
+
+\textbf{Marginal PMF from joint PMF}
+\[P(X = x) = \sum_y P(X=x, Y=y)\]
+\textbf{Marginal PDF from joint PDF}
+\[f_X(x) = \int_{-\infty}^\infty f_{X, Y}(x, y) dy\]
+
+
+\subsection*{Independence of Random Variables}
+Random variables $X$ and $Y$ are independent if and only if any of the following conditions holds:
+\begin{itemize}
+    \itemsep -1mm
+    \item Joint CDF is the product of the marginal CDFs 
+    \item Joint PMF/PDF is the product of the marginal PMFs/PDFs
+    \item Conditional distribution of $Y$ given $X$ is the marginal distribution of $Y$
+\end{itemize}

@@ -1,0 +1,25 @@
+\section{WLLN}
+    \subsection*{Def}
+        Let $X_1, X_2, \dots$ be a sequence of i.i.d. random variables with $E(X_i) = \mu$ and $Var(X_i) = \sigma^2 < \infty$. Then, for any $\epsilon > 0$,
+        \[
+            \lim_{n \to \infty} P(|\bar{X}_n - \mu| > \epsilon) = 0
+        \]
+        where $\bar{X}_n = \frac{1}{n} \sum_{i=1}^n X_i$.
+
+    
+    \subsection*{Proof}
+        $P(|\bar{X}_n - \mu| > \epsilon) = P(|\bar{X}_n - \mu|^2 > \epsilon^2)$
+
+        By Chebyshev's inequality, we have
+        \[
+        P(|\bar{X}_n - \mu|^2 > \epsilon^2) \leq \frac{\sigma^2}{n\epsilon^2}
+        \]
+
+        Since $\frac{\sigma^2}{n\epsilon^2} \to 0$ as $n \to \infty$, we can conclude that
+        \[
+        \lim_{n \to \infty} P(|\bar{X}_n - \mu|^2 > \epsilon^2) = 0
+        \]
+
+        Therefore, $\bar{X}_n \xrightarrow{p} \mu$.
+        
+            

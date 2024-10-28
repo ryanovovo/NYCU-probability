@@ -1,0 +1,20 @@
+\section{Conditional expectation}
+\label{sec:conditional_distribution}
+\subsection*{Def}
+\begin{description}
+    \item[Conditional PMF] The conditional PMF of $X$ given $Y = y$ is
+    \[f_{X|Y}(x|y) = \frac{P(X = x, Y = y)}{P(Y = y)}\]
+    \item[Conditional PDF] The conditional PDF of $X$ given $Y = y$ is
+    \[f_{X|Y}(x|y) = \frac{f_{X,Y}(x,y)}{f_Y(y)}\]
+    \item[Conditional Expectation discrete] The conditional expectation of $X$ given $Y = y$ is
+    \[E(X|Y = y) = \sum_{x}xf_{X|Y}(x|y)\]
+    \item[Conditional Expectation continuous] The conditional expectation of $X$ given $Y = y$ is
+    \[E(X|Y = y) = \int_{-\infty}^{\infty}xf_{X|Y}(x|y)dx\]
+\end{description}
+\subsection*{Conditional Expectation Properties}
+\begin{description}
+    \item[Independence] If $X$ and $Y$ are independent random variables, then
+    \[E(X|Y = y) = E(X)\]
+    \item[Law of Iterated Expectation] If $X$ and $Y$ are random variables, then
+    \[E(X) = E(E(X|Y))\]
+\end{description}

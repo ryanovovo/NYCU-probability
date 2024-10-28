@@ -1,0 +1,35 @@
+\section{Moment}
+    \subsection*{n-th moment}
+        $E[X^n]$
+    \subsection*{n-th central moment}
+        $E[(X-E[X])^n]$
+
+    \subsection*{exsistence}
+        $E[|x|] < \infty$
+
+    \subsection*{Riemann Rearangement Theorem}
+        Let ${a_n}$ be sequence of numbers satisfy that:
+        \begin{enumerate}
+            \item \[\sum_{n=1}^{\infty} a_n\ converges\] 
+            \item \[\sum_{n=1}^{\infty} |a_n|=\infty\] 
+        \end{enumerate}
+
+        Then for any real number $x$, there exists a rearrangement of ${a_n}$
+        such that the sum of the rearrangement is $x$.
+
+\section{Variance}
+    \subsection*{Def}
+        $Var(X)=E[(X-E[X])^2]=E[X^2]-E[X]^2$
+
+    \subsection*{Properties}
+        \begin{enumerate}
+            \item $Var(X) \geq 0$
+            \item $Var(X) = 0 \iff P(X=E[X]) = 1$
+            \item $Var(X+c) = Var(X)$
+            \item $Var(aX)=a^2Var(X)$
+            \item $Var(X+Y) = Var(X) + Var(Y)$
+            
+            (X, Y are independent)
+        \end{enumerate}
+
+

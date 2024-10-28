@@ -1,0 +1,44 @@
+\section{Bivariate Normal Distribution}
+    \subsection*{Def}
+        $X, Y$ are bivariate normal if $X, Y$ are jointly normal.
+
+        $X, Y$ are jointly normal if $\forall a, b \in \mathbb{R}$, $aX+bY$ is normal.
+
+
+
+    \subsection*{Properties}
+        \begin{enumerate}
+            \item $X, Y$ are jointly normal $\iff$ $X, Y$ are independent.
+            \item $X, Y$ are jointly normal $\iff$ $X, Y$ are uncorrelated.
+        \end{enumerate}
+
+    \subsection*{joint PDF}
+        \[
+        \begin{split}
+            &f_{X,Y}(x,y) = \\
+            &\frac{1}{2\pi\sigma_x\sigma_y\sqrt{1-\rho^2}}\exp\left(-\frac{1}{2(1-\rho^2)}\right.\\
+            &\left.\left[\frac{(x-\mu_x)^2}{\sigma_x^2}+\frac{(y-\mu_y)^2}{\sigma_y^2}-\frac{2\rho(x-\mu_x)(y-\mu_y)}{\sigma_x\sigma_y}\right]\right)
+        \end{split}
+        \]
+    
+    \subsection*{joint PDF matrix form}
+        \[
+        \begin{split}
+            &f_{X,Y}(x,y) = \\
+            &\frac{1}{2\pi\sqrt{|\Sigma|}}\exp\left(-\frac{1}{2}(x-\mu)^T\Sigma^{-1}(x-\mu)\right)
+        \end{split}
+        \]
+        where $\mu = \begin{bmatrix}\mu_x\\\mu_y\end{bmatrix}$, $\Sigma = \begin{bmatrix}\sigma_x^2 & \rho\sigma_x\sigma_y\\\rho\sigma_x\sigma_y & \sigma_y^2\end{bmatrix}$
+
+    \subsection*{construction of bivariate normal r.v.}
+        Let $Z_1, Z_2$ be independent standard normal r.v.
+
+        Let $X = \mu_x + \sigma_xZ_1$, $Y = \mu_y + \sigma_y(\rho Z_1 + \sqrt{1-\rho^2}Z_2)$
+
+        Then $X, Y$ are bivariate normal r.v. with $\mu_x, \mu_y, \sigma_x, \sigma_y, \rho$.
+        
+
+       
+        
+
+   

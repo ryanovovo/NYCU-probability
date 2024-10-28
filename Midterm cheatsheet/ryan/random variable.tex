@@ -1,0 +1,213 @@
+\section{Bernoulli R.V}
+    \subsection*{PMF}
+        parameter: p
+        \begin{equation*}
+            P(X=k)=
+            \begin{cases}
+                p & if k = 1 \\
+                1-p & if k = 0 \\
+                0 & otherwise
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{CDF}
+        \begin{equation*}
+            F(x)=
+            \begin{cases}
+                0 & if x < 0 \\
+                1-p & if 0 \leq x < 1 \\
+                1 & if x \geq 1
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{Expected value}
+        $E[X] = p$
+
+    \subsection*{Variance}
+        $Var(X)=p(1-p)$
+
+\section{Binoial R.V}
+    \subsection*{PMF}
+        parameter: n, p
+        \begin{equation*}
+            P(X=k)=
+            \begin{cases}
+                \binom{n}{k} p^k (1-p)^{n-k} & if k = 0,1...,n \\
+                0 & otherwise
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{CDF}
+        \begin{equation*}
+            F(x)=
+            \begin{cases}
+                0 & if x < 0 \\
+                \sum_{k=0}^{x} \binom{n}{k} p^k (1-p)^{n-k} & if 0 \leq x < n \\
+                1 & if x \geq n
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{Expected value}
+        $E[X] = np$
+
+    \subsection*{Variance}
+        $Var(X)=np(1-p)$
+
+\section{Poisson R.V}
+    \subsection*{PMF}
+        parameter: $\lambda, T$
+        \begin{equation*}
+            P(X=n)=
+            \begin{cases}
+                \frac{(\lambda T)^n}{n!} e^{-\lambda T} & if n = 0,1,2... \\
+                0 & otherwise
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{CDF}
+        \begin{equation*}
+            F(x)=
+            \begin{cases}
+                0 & if x < 0 \\
+                \sum_{k=0}^{x} \frac{(\lambda T)^k}{k!} e^{-\lambda T} & if 0 \leq x < n \\
+                1 & if x \geq n
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{Expected value}
+        $E[X] = \lambda T$
+
+    \subsection*{Variance}
+        $Var(X)=\lambda T$
+
+    \subsection*{Sum of independent Poisson R.V}
+        If $X_1$ and $X_2$ are independent Poisson R.V with parameters $\lambda_1, T$ and $\lambda_2, T$ respectively, then $X_1 + X_2$ is a Poisson R.V with parameter \\ $\lambda_1 + \lambda_2, T$.
+
+\section{Geometric R.V}
+    \subsection*{PMF}
+        parameter: p
+        \begin{equation*}
+            P(X=n)=
+            \begin{cases}
+                p(1-p)^{n-1} & if n = 1,2,3... \\
+                0 & otherwise
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{CDF}
+        \begin{equation*}
+            F(x)=
+            \begin{cases}
+                0 & if x < 0 \\
+                1-(1-p)^{\lfloor x \rfloor} & if 0 \leq x < n \\
+                1 & if x \geq n
+            \end{cases}
+        \end{equation*}
+
+
+    \subsection*{Expected value}
+        $E[X] = \frac{1}{p}$
+
+    \subsection*{Variance}
+        $Var(X)=\frac{1-p}{p^2}$
+
+\section{Discrete Uniform R.V}
+    \subsection*{PMF}
+        parameter: a, b
+        \begin{equation*}
+            P(X=k)=
+            \begin{cases}
+                \frac{1}{b-a+1} & if k = a, a+1, ..., b \\
+                0 & otherwise
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{CDF}
+        \begin{equation*}
+            F(x)=
+            \begin{cases}
+                0 & if x < a \\
+                \frac{\lfloor x \rfloor - a + 1}{b-a+1} & if a \leq x < b \\
+                1 & if x \geq b
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{Expected value}
+        $E[X] = \frac{a+b}{2}$
+
+    \subsection*{Variance}
+        $Var(X)=\frac{(b-a+1)^2-1}{12}$
+
+\section{Continuous Uniform R.V}
+    \subsection*{PDF}
+        parameter: a, b
+        \begin{equation*}
+            f(x)=
+            \begin{cases}
+                \frac{1}{b-a} & if a \leq x \leq b \\
+                0 & otherwise
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{CDF}
+        \begin{equation*}
+            F(x)=
+            \begin{cases}
+                0 & if x < a \\
+                \frac{x-a}{b-a} & if a \leq x < b \\
+                1 & if x \geq b
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{Expected value}
+        $E[X] = \frac{a+b}{2}$
+
+    \subsection*{Variance}
+        $Var(X)=\frac{(b-a)^2}{12}$
+
+\section{Exponential R.V}
+    \subsection*{PDF}
+        parameter: $\lambda$
+        \begin{equation*}
+            f(x)=
+            \begin{cases}
+                \lambda e^{-\lambda x} & if x \geq 0 \\
+                0 & otherwise
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{CDF}
+        \begin{equation*}
+            F(x)=
+            \begin{cases}
+                0 & if x < 0 \\
+                1-e^{-\lambda x} & if x \geq 0
+            \end{cases}
+        \end{equation*}
+
+    \subsection*{Expected value}
+        $E[X] = \frac{1}{\lambda}$
+
+    \subsection*{Variance}
+        $Var(X)=\frac{1}{\lambda^2}$
+
+\section{Normal R.V}
+    \subsection*{PDF}
+        parameter: $\mu, \sigma^2$
+        \begin{equation*}
+            f(x)=\frac{1}{\sqrt{2\pi\sigma^2}}e^{-\frac{(x-\mu)^2}{2\sigma^2}}
+        \end{equation*}
+
+    \subsection*{CDF}
+        \begin{equation*}
+            F(x)=\frac{1}{\sqrt{2\pi\sigma^2}}\int_{-\infty}^{x} e^{-\frac{(t-\mu)^2}{2\sigma^2}} dt
+        \end{equation*}
+
+    \subsection*{Expected value}
+        $E[X] = \mu$
+
+    \subsection*{Variance}
+        $Var(X)=\sigma^2$
+
+
+    

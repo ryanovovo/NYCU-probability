@@ -1,0 +1,21 @@
+\section{Inverse Transform Sampleing}
+    \subsection*{Def}
+        $X$ is a random variable with CDF $F(x)$, then $F^{-1}(U)$ is a random variable with CDF $F(x)$, where $U$ is a random variable with uniform distribution on $[0,1]$
+    
+    \subsection*{Proof}
+        \begin{equation*}
+            \begin{aligned}
+                F(t) &= P(x\leq t) \\
+                &= P(T(u) \leq t) \\
+                &= P(u \leq T^{-1}(t)) \\
+                &= T^{-1}(t)\\
+                &= F^{-1}(t)
+            \end{aligned}
+        \end{equation*}
+    
+        \subsection*{Algorithm}
+        \begin{enumerate}
+            \item Generate $U$ with uniform distribution on $[0,1]$
+            \item Compute $x = F^{-1}(U)$
+        \end{enumerate}
+    
